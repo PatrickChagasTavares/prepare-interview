@@ -100,7 +100,6 @@ func (hc *httpChatgpt) CreateCompletion(ctx context.Context, input string) (outp
 }
 
 func (hc httpChatgpt) MakeInputInterview(role, skills, lang string) (output string) {
-
 	switch lang {
 	case "english":
 		output = fmt.Sprintf(
@@ -113,6 +112,21 @@ func (hc httpChatgpt) MakeInputInterview(role, skills, lang string) (output stri
 			`Gostaria que você me ajudasse a me preparar para uma entrevista para o cargo de "%s" em "%s".
 				Por fim gere esse template de forma linear.`,
 			role, skills)
+	}
+
+	return
+}
+
+func (hc httpChatgpt) MakeInputCompany(name, lang string) (output string) {
+	switch lang {
+	case "english":
+		output = fmt.Sprintf(
+			`I would like you to do a resume about company "%s".`,
+			name)
+
+	default:
+		output = fmt.Sprintf(
+			`Gostaria que você me fizesse um resumo da empresa "%s".`, name)
 	}
 
 	return
