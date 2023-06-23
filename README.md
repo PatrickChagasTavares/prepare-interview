@@ -21,10 +21,8 @@ go run cmd/interview/main.go -token="your token openID" prepare -role="Software 
 
 
 ## Todo list:
-- [ ] Create Readme;
-- [ ] Implement helper;
+- [X] Create Readme;
+- [X] Implement flags;
+- [X] Implement HTTP requests to OpenAI;
 - [ ] Tests with mocks;
-- [ ] Implement flags;
-- [ ] Implement HTTP requests to OpenAI;
 - [ ] Complete all tests;
-- [ ] Implement a method to safe openai_key; 
