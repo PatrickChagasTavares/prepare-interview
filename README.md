@@ -11,14 +11,15 @@ I used OpenAI (ChatGPT) to generate that summary so you need to generate the api
 
 ### search resume company
 ```
-go run cmd/interview/main.go -token="your token openID" company -name="Facebook"
+go run cmd/interview/main.go -token="your token openID" company -name="Linkedin"
 ```
-![prepare_interview_company](https://github.com/PatrickChagastavares/prepare-interview/assets/49497853/314b8918-1d8c-4020-9681-e5cc21be3af6)
+![prepare_interview_company](https://github.com/PatrickChagastavares/prepare-interview/assets/49497853/5d0900e7-ba98-4994-9dac-e6cf4641f3d2)
 ### Generate a summary to prepare for the vacancy
 ```
-go run cmd/interview/main.go -token="your token openID" prepare -role="Software Developer" -skills="Golang, Node e GCP" -lang="english"
+go run cmd/interview/main.go -token="your token openID" prepare -role="Software Developer" -skills="Golang, Node e GCP" -lang="portuguese"
 ```
-![prepare_interview_company](https://github.com/PatrickChagastavares/prepare-interview/assets/49497853/9de17435-48f4-461d-9317-d58f73d63e2f)
+![prepare_interview_role](https://github.com/PatrickChagastavares/prepare-interview/assets/49497853/e6b888e8-1755-4a5e-860b-780f9b4cd066)
+
 ## Todo list:
 - [X] Create Readme;
 - [X] Implement flags;
