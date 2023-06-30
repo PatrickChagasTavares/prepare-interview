@@ -6,20 +6,20 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/PatrickChagastavares/prepare-interview/internal/entity"
+	"github.com/PatrickChagastavares/prepare-interview/internal/config"
 	"github.com/PatrickChagastavares/prepare-interview/pkg/chatgpt"
 )
 
 func Start() {
-	cmds := entity.LoadComands()
+	cmds := config.LoadComands()
 	log := log.Default()
 
 	switch cmds.Operation() {
-	case entity.OperationVersion:
+	case config.OperationVersion:
 		fmt.Println(version)
 		break
 
-	case entity.OperationCompany:
+	case config.OperationCompany:
 		if !cmds.HasToken() {
 			log.Fatalln("ERROR: token is required")
 			break
@@ -36,7 +36,7 @@ func Start() {
 
 		log.Println(output)
 
-	case entity.OperationPrepare:
+	case config.OperationPrepare:
 		if !cmds.HasToken() {
 			log.Fatalln("ERROR: token is required")
 			break
