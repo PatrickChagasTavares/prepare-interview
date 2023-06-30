@@ -7,22 +7,35 @@ I used OpenAI (ChatGPT) to generate that summary so you need to generate the api
 
 [Here](https://elephas.app/blog/how-to-create-openai-api-keys-cl5c4f21d281431po7k8fgyol0) is a post to help to generate the API key.
 
-## How to Use:
+## How to install:
+```
+go install github.com/PatrickChagastavares/prepare-interview/cmd/interview@latest
+```
 
-### search resume company
+## How to use:
+
+### Show version
 ```
-go run cmd/interview/main.go -token="your token openID" company -name="Linkedin"
+interview version
 ```
-![prepare_interview_company](https://github.com/PatrickChagastavares/prepare-interview/assets/49497853/5d0900e7-ba98-4994-9dac-e6cf4641f3d2)
+
+### Show lists of commands and arguments
+```
+interview -help
+```
+
+### Search resume company
+```
+interview -token="your token openID" company -name="Linkedin" -lang="english"
+```
+![prepare_interview_company](https://github.com/PatrickChagastavares/prepare-interview/assets/49497853/483b41cc-2252-40ec-a0bb-a27410a8e68f)
 ### Generate a summary to prepare for the vacancy
 ```
-go run cmd/interview/main.go -token="your token openID" prepare -role="Software Developer" -skills="Golang, Node e GCP" -lang="portuguese"
+interview -token="your token openID" prepare -role="Senior Software Engineer" -skills="Golang, Node And AWS" -lang="english"
 ```
-![prepare_interview_role](https://github.com/PatrickChagastavares/prepare-interview/assets/49497853/e6b888e8-1755-4a5e-860b-780f9b4cd066)
+![prepare_interview_role](https://github.com/PatrickChagastavares/prepare-interview/assets/49497853/74e35d19-6147-4d24-a45a-9e684a949beb)
 
 ## Todo list:
 - [X] Create Readme;
 - [X] Implement flags;
 - [X] Implement HTTP requests to OpenAI;
-- [ ] Tests with mocks;
-- [ ] Complete all tests;
